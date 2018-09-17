@@ -1,0 +1,55 @@
+def abc():
+    a=[1,2,3,4,5,6,7,8,9]
+    for i in a:
+        for l in a:
+            if l<=i:
+                print(l,end='*')
+                print(i,end='=')
+                print(i*l,end='\t')
+                #if(print(l,'*',i,'=',i*l,end=''))==1 * 1 = 1
+        print('')
+
+abc()
+
+
+
+
+
+
+
+
+
+
+
+
+def abc():
+    for i in range(0,100):
+        print(i,end='')
+        if i%3==0:
+            print("Fizz",end='')
+        if i%5==0:
+            print("Buzz",end='')
+        print("")
+
+abc()
+
+
+
+
+
+
+
+
+
+def abc():
+    a=[1,2,3,4,5,6,7,8,9]
+    for i in a:
+        for l in a:
+            if l<=i:
+                print(l,end='*')
+                print(i,end='=')
+                print(i*l,end='\t')
+                #if(print(l,'*',i,'=',i*l,end=''))==1 * 1 = 1
+        print('')
+
+abc()
