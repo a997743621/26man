@@ -1,0 +1,62 @@
+Python之美
+
+https://mp.weixin.qq.com/s?__biz=MzA3NDk1NjI0OQ==&mid=2247483930&idx=1&sn=ec52f6f0551a0c66baa5008d4cabf38c&chksm=9f76aeaca80127ba46aee8ae5ad446b93062f84cc1feeb1992e003c6ac7c7b32b3d0ce6ac96e#rd
+
+1.元祖生成，它的元素就不再能改变了。
+2.直接修改元祖元素会失败。
+3.用+=可以"修改"列表和字典，其中列表会报错，字典不会。
+
+字典不报错是因为不是对元组的赋值，而是直接操作了元组中的字典项了！！！
+列表报错是因为对列表[3, 4]的赋值成功，但是后来发生的元组赋值失败造成的！！！即成功修改列表，但是元祖修改失败.
+
+
+
+
+4.更多控制流工具
+https://docs.python.org/3/tutorial/controlflow.html
+1.if
+2.for
+3.range()
+range(len(列表))，range配合len使用可产生enumerate()函数效果
+4.break,continue,else
+5.pass
+6.def
+7.
+
+def f(a, L=[]):
+    L.append(a)
+    return L
+
+print(f(1))
+print(f(2))
+print(f(3))
+这将打印出来
+
+[1]
+[1, 2]
+[1, 2, 3]
+
+解决方法
+def f(a, L=None):
+    if L is None:
+        L = []
+    L.append(a)
+    return L
+
+
+
+
+Python 2 和 Python 3 有哪些主要区别？
+https://www.zhihu.com/question/19698598/answer/206571839
+
+Python 3和Python 2的区别：
+ 1. 统一了字符编码支持。
+ 2. 增加了新的语法。
+ 3. 修改了一些语法。
+ 4. 去掉了一些语法。<>(也就是!=)但是！=仍然可以用、xrange（其实就是range）循环迭代使用
+ 5. 增加一些新的模块。
+ 6. 修改了一些模块。
+ 7. 模块改名。
+ 8. 去掉了一些模块或者函数。
+ 9. 优化。
+10.其他
