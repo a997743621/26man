@@ -1,0 +1,130 @@
+print('hello,world'.replace('l','*'))
+
+
+
+
+print (('Good'.lower()+'!')*3)
+print ((('Good'.replace('G','g')).replace('d','d!'))*3)
+
+
+
+
+
+
+
+print('FhlqoWe92Qbvc'.swapcase())
+
+
+
+
+
+a='Fh1qoWe92Qbvc'
+b=''
+for c in a:
+    if c.isdigit():
+        b+=c
+
+print(b)
+
+
+
+
+
+print(sorted([2,0,3,6,9]))
+
+
+
+
+
+
+
+
+l=[2,3,1,2,4,3]
+l.pop()
+l.pop()
+l.pop()
+l.insert(3,4)
+print(l)
+
+
+
+
+l='aasdebbcaa'
+a={}
+a[l[0]]=(l.count(l[0]))
+a[l[2]]=(l.count(l[2]))
+a[l[3]]=(l.count(l[3]))
+a[l[4]]=(l.count(l[4]))
+a[l[5]]=(l.count(l[5]))
+a[l[7]]=(l.count(l[7]))
+print(a)
+
+
+
+
+
+def number():
+
+    str_num=input("input:")
+    count1=0
+    count2=0
+    count3=0
+    count4=0
+    for i in str_num:
+        if i.isdigit():
+            count1+= 1
+        elif i.isalpha():
+            count2+=1
+
+        elif i.isspace():
+            count3 += 1
+        else:
+
+            count4+=1
+
+    print("the num is ",count1)
+    print("the zimu is ",count2)
+
+    print("the kongge is ",count3)
+
+    print("the qita is ",count4)
+
+    if str_num!="997743621":
+        number()
+
+number()
+
+
+
+
+
+
+
+def number():
+
+    a=input("input:")
+    a.replace(" ","")
+    print(a)
+
+
+number()
+
+
+
+
+
+
+import random
+i = 1
+a = random.randint(0,100)
+b = int(input('input:'))
+while a != b:
+    if a > b:
+        print('so small')
+        b = int(input('input:'))
+    else:
+        print('so big')
+        b = int(input('input:'))
+    i+=1
+else:
+    print(i,b)
