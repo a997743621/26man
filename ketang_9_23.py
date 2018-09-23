@@ -94,7 +94,7 @@ print(a)
 TTT(6)
 lst=range(1,11)
 def aaa(lst):
-    lt=[i*i for i in lst]
+    lt=[i*i*i for i in lst]
     return lt
 lt=aaa(lst)
 print(list(lst),"\n",lt)
