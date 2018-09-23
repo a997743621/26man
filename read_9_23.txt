@@ -1,0 +1,61 @@
+输出变量有三种方法：％-formatting，str.format()，f-Strings
+用法如下：
+
+>>> name = "Eric"
+>>> age = 74
+>>> "Hello, %s. You are %s." % (name, age)
+'Hello Eric. You are 74.'
+
+
+>>> "Hello, {1}. You are {0}.".format(age, name)
+'Hello, Eric. You are 74.'
+>>> person = {'name': 'Eric', 'age': 74}
+>>> "Hello, {name}. You are {age}.".format(name=person['name'], age=person['age'])
+'Hello, Eric. You are 74.'
+
+
+>>> name = "Eric"
+>>> age = 74
+>>> f"Hello, {name}. You are {age}."
+'Hello, Eric. You are 74.'
+>>> F"Hello, {name}. You are {age}."
+'Hello, Eric. You are 74.'
+
+但是前面两种都有一定的缺点如下：
+％-formatting和str.format()一旦开始使用多个参数和更长的字符串，代码将变得难以阅读，很冗长甚至导致错误。
+庆幸的是f-Strings不会，还支持大小写，可以直接调用方法，还可以有多行代码、运行更快如
+>>> name = "Eric"
+>>> profession = "comedian"
+>>> affiliation = "Monty Python"
+>>> message = (
+...     f"Hi {name}. "
+...     f"You are a {profession}. "
+...     f"You were in {affiliation}."
+... )
+>>> message
+'Hi Eric. You are a comedian. You were in Monty Python.'
+还可以这样
+>>> message = f"Hi {name}. " \
+...           f"You are a {profession}. " \
+...           f"You were in {affiliation}."
+...
+>>> message
+'Hi Eric. You are a comedian. You were in Monty Python.'
+
+
+
+
+functools，用于高阶函数：指那些作用于函数或者返回其它函数的函数，通常只要是可以被当做函数调用的对象就是这个模块的目标。
+import functools
+
+def add(a,b):
+    return a + b
+add3 = functools.partial(add,3)
+add5 = functools.partial(add,5)
+
+print(add3(4))###输出7
+print(add5(10))###输出15
+
+
+a = range(1,6)
+print(functools.reduce(lambda x,y:x+y,a))输出15
