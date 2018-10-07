@@ -1,0 +1,27 @@
+阅读笔记：
+1.try里面写可能出错的代码
+2.except里面写提醒补救的代码
+3.except还可以不带任何异常
+4.try...except...可以一对多
+5.有一个可选的else
+6.raise语句允许强制发生指定的异常。
+7.可以自定义异常
+e.g.
+import sys
+
+try:
+    f = open('myfile.txt')
+    s = f.readline()
+    i = int(s.strip())
+except OSError as err:
+    print("OS error: {0}".format(err))
+except ValueError:
+    print("Could not convert data to an integer.")
+except:
+    print("Unexpected error:", sys.exc_info()[0])
+    raise
+工作原理大致如下
+首先，执行try子句（try和 except关键字之间的语句）。
+如果没有发生异常，则跳过except子句并try完成语句的执行 。
+如果在执行try子句期间发生异常，则跳过该子句的其余部分。然后，如果其类型匹配在except关键字后面命名的异常 ，则执行except子句，然后在try语句之后继续执行。
+如果发生的异常与except子句中指定的异常不匹配，则将其传递给外部try语句; 如果没有找到处理程序，则它是一个未处理的异常，执行将停止并显示如上所示的消息。
